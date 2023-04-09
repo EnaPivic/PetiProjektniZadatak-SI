@@ -1,0 +1,14 @@
+{
+  "name": "fbase-proj",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ena pivic",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^9.19.1"
+  }
+}
