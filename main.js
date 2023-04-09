@@ -38,6 +38,7 @@
         var allInputs = document.querySelectorAll('input');
 
         var findID = document.querySelector("#searchStudentIndex");
+        var deleteID = document.querySelector("#deleteStudentIndex");
         var findName = document.querySelector("#findName");
         var findLast = document.querySelector("#findLast");
         var findCGPA= document.querySelector("#findCGPA");
@@ -86,20 +87,9 @@
         }
 
         function RemoveData(){
-            const dbref2 = ref(db);
-            get(child(dbref2, "Students/" + findID.value))
-            .then((snapshot)=>{
-                if(snapshot.exists()){
-                    remove(ref(db, "Students/"+ enterID.value))
-                    alert("Data deleted successfully");
-
-                } else {
-                    alert("Data not found");
-                }
-            })
-            .catch((error)=>{
-                alert(error);
-            });
+           
+                    remove(ref(db, "Students/"+ deleteID.value))
+                      alert("Data deleted");
             allInputs.forEach(singleInput => singleInput.value = '');
 
         }
